@@ -44,8 +44,9 @@
         border-radius: 8px;
 
         display: flex;
-        align-items: center;
+        /* align-items: center; */
         gap: 86px;
+        position: relative;
       }
 
       img {
@@ -72,56 +73,85 @@
         color: #c3fae8;
       }
 
+      /* CONTROLS */
+
+      .btn {
+        background-color: #fff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
       .btn-icon {
-        width: 24px;
         height: 24px;
-        stroke: black;
-        border-radius: 100%;
+        width: 24px;
+        stroke: #087f5b;
+      }
+
+      .btn--left {
+        left: 0;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        right: 0;
+        top: 50%;
+
+        transform: translate(50%, -50%);
       }
     </style>
   </head>
   <body>
     <div class="carousel">
-      <img src="maria.jpg" alt="Marie de Almeida" />
+      <img src="maria.jpg" alt="Maria de Almeida" />
       <blockquote class="testimonial">
         <p class="testimonial-text">
-          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-          obcaecati temporibus dicta, atque enim numquam rerum a nemo ullam. Nam
-          optio distinctio reprehenderit possimus omnis quis voluptatem id quae
-          voluptatum?"
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+          nesciunt aliquid ex atque quibusdam. Rerum officia unde suscipit quo
+          sunt hic illo fugit."
         </p>
         <p class="testimonial-author">Maria de Almeida</p>
         <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
       </blockquote>
 
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
         >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
+            stroke-width="2"
             d="M15 19l-7-7 7-7"
           />
         </svg>
       </button>
-      <button class="btn">
+
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
         >
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
+            stroke-width="2"
             d="M9 5l7 7-7 7"
           />
         </svg>
